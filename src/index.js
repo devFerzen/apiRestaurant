@@ -8,7 +8,7 @@ import routes from './routes';
 
 //inicializar app
 let app = express();
-app.server = http:createServer(app);
+app.server = http.createServer(app);
 
 //middleware
 
