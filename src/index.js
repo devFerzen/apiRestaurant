@@ -11,7 +11,10 @@ let app = express();
 app.server = http.createServer(app);
 
 //Configure bodyParser to add data from the body
-app.use(bodyParser.urlencoded({extended:true}));
+app.use(bodyParser.urlencoded({
+  extended:true,
+  limit:config.bodyLimit
+}));
 app.use(bodyParser.json());
 
 //middleware
