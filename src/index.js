@@ -1,0 +1,23 @@
+import express from 'express';
+import http from 'http';
+import mongoose from 'mongoose';
+import bodyParser from 'body-parser';
+
+import config from './config';
+import routes from './routes';
+
+//inicializar app
+let app = express();
+app.server = http:createServer(app);
+
+//middleware
+
+//passportConfig
+
+//Mandar todas las url /v1 a la carpeta routes
+app.use('/v1',routes);
+app.server.listen(config.port);
+console.log('Start on port ${app.server.address().port}');
+
+//exporting this app as default
+export default app;
